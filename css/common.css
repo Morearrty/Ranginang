@@ -374,3 +374,191 @@
         padding: 3px 6px;
     }
 }
+
+/* Mobile-First Responsive Fixes */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    .header {
+        padding: 4px 0;
+    }
+    
+    .logo-img {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .brand-name {
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        padding: 15px 0 8px;
+    }
+    
+    .footer-content {
+        gap: 12px;
+    }
+    
+    .footer-brand {
+        font-size: 0.9rem;
+    }
+    
+    .footer-address {
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+    
+    .footer-copyright {
+        font-size: 0.65rem;
+    }
+    
+    .social-link {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .social-link img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .footer-nav-link {
+        font-size: 0.7rem;
+        padding: 2px 4px;
+    }
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+    .nav {
+        position: relative;
+    }
+    
+    .nav-list {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: linear-gradient(135deg, var(--dark-green), var(--darker-green));
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 40px 20px;
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .nav-list.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+        margin: 5px 0;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #DAA520;
+        background: rgba(218, 165, 32, 0.1);
+        border: 1px solid rgba(218, 165, 32, 0.2);
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(218, 165, 32, 0.2);
+        color: var(--white);
+        transform: none;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    /* Mobile menu toggle button */
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: #DAA520;
+        font-size: 20px;
+    }
+    
+    .mobile-menu-toggle:focus {
+        outline: 2px solid #DAA520;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    /* Reduce animations on mobile to improve performance */
+    *, *::before, *::after {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important;
+    }
+    
+    /* Optimize images for mobile */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+    
+    /* Better text rendering on mobile */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Prevent body scroll when mobile menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-appearance: none) {
+    @media (max-width: 768px) {
+        .header {
+            position: -webkit-sticky;
+            position: sticky;
+        }
+        
+        /* Fix iOS viewport height issues */
+        .profil-hero,
+        .kontak-hero {
+            min-height: -webkit-fill-available;
+        }
+    }
+}
+
+/* Android specific fixes */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+}
+
+/* Prevent horizontal scroll */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}

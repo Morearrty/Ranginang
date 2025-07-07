@@ -381,3 +381,44 @@
         padding: 4px 8px;
     }
 }
+
+/* Extra small mobile devices */
+@media (max-width: 320px) {
+    .kontak-hero {
+        margin-top: 45px;
+        min-height: 50vh;
+    }
+    
+    .hero-image-wrapper {
+        height: 50vh;
+    }
+    
+    .hero-text-overlay {
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        padding: 15px 20px;
+        border-radius: 15px;
+    }
+    
+    .hero-main-title {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero-description {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+    
+    .hero-note {
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+}
