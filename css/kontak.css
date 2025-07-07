@@ -84,6 +84,282 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/* Contact Information Section */
+.kontak-info {
+    background: var(--cream);
+    padding: 60px 0;
+}
+
+.kontak-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.kontak-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.kontak-title {
+    font-family: var(--font-garamond);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.kontak-subtitle {
+    font-family: var(--font-poppins);
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.kontak-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.kontak-card {
+    background: var(--white);
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+}
+
+.kontak-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-heavy);
+    border-color: var(--secondary-yellow);
+}
+
+.kontak-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--dark-green), var(--secondary-yellow));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--white);
+}
+
+.kontak-card-title {
+    font-family: var(--font-garamond);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.kontak-card-text {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Social Media Section */
+.social-media-section {
+    background: var(--white);
+    padding: 60px 0;
+}
+
+.social-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-title {
+    font-family: var(--font-garamond);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.social-subtitle {
+    font-family: var(--font-poppins);
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.social-media-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    display: block;
+    height: 200px;
+}
+
+.social-media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.social-media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.social-media-card:hover .social-media-img {
+    transform: scale(1.05);
+}
+
+.social-media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.social-media-title {
+    font-family: var(--font-garamond);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.social-media-text {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Online Store Section */
+.online-store-section {
+    background: var(--cream);
+    padding: 60px 0;
+}
+
+.store-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.store-title {
+    font-family: var(--font-garamond);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.store-subtitle {
+    font-family: var(--font-poppins);
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.store-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    display: block;
+    height: 180px;
+    border: 3px solid transparent;
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-heavy);
+    border-color: var(--secondary-yellow);
+}
+
+.store-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.store-card:hover .store-img {
+    transform: scale(1.05);
+}
+
+.store-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.store-name {
+    font-family: var(--font-garamond);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.store-text {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
 /* Contact Footer */
 .footer-kontak {
     background: linear-gradient(135deg, #2F4F2F, #1C3A1C);
@@ -244,24 +520,112 @@
         font-size: 0.8rem;
     }
     
-    .social-icons-section {
-        padding: 15px 0;
+    /* Contact Info Section */
+    .kontak-info {
+        padding: 40px 0;
     }
     
-    .social-icons-grid {
-        gap: 15px;
+    .kontak-header {
+        margin-bottom: 30px;
     }
     
-    .social-icon {
-        width: 45px;
-        height: 45px;
+    .kontak-title {
+        font-size: 2rem;
     }
     
-    .social-icon img {
-        width: 25px;
-        height: 25px;
+    .kontak-subtitle {
+        font-size: 1rem;
     }
     
+    .kontak-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .kontak-card {
+        padding: 25px 20px;
+    }
+    
+    .kontak-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .kontak-card-title {
+        font-size: 1.2rem;
+    }
+    
+    .kontak-card-text {
+        font-size: 0.85rem;
+    }
+    
+    /* Social Media Section */
+    .social-media-section {
+        padding: 40px 0;
+    }
+    
+    .social-title {
+        font-size: 2rem;
+    }
+    
+    .social-subtitle {
+        font-size: 1rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .social-media-card {
+        height: 160px;
+    }
+    
+    .social-media-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-media-title {
+        font-size: 1.1rem;
+    }
+    
+    .social-media-text {
+        font-size: 0.8rem;
+    }
+    
+    /* Online Store Section */
+    .online-store-section {
+        padding: 40px 0;
+    }
+    
+    .store-title {
+        font-size: 2rem;
+    }
+    
+    .store-subtitle {
+        font-size: 1rem;
+    }
+    
+    .store-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .store-card {
+        height: 160px;
+    }
+    
+    .store-name {
+        font-size: 1.3rem;
+    }
+    
+    .store-text {
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
     .footer-kontak {
         padding: 20px 0;
     }
@@ -279,6 +643,114 @@
     
     .footer-kontak .footer-nav {
         gap: 15px;
+    }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 768px) {
+    /* Ensure minimum touch target size */
+    .kontak-card,
+    .social-media-card,
+    .store-card {
+        min-height: 44px;
+        -webkit-tap-highlight-color: rgba(218, 165, 32, 0.2);
+        -webkit-tap-highlight-color: rgba(218, 165, 32, 0.2);
+    }
+    
+    /* Improve readability on mobile */
+    .kontak-card-text,
+    .social-media-text,
+    .store-text {
+        line-height: 1.5;
+    }
+    
+    /* Prevent horizontal scroll */
+    .kontak-content,
+    .social-content,
+    .store-content {
+        overflow-x: hidden;
+    }
+    
+    /* Optimize images for mobile */
+    .social-media-img,
+    .store-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+    
+    /* Smooth scrolling for mobile */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-appearance: none) {
+    @media (max-width: 768px) {
+        .kontak-hero {
+            min-height: -webkit-fill-available;
+        }
+        
+        .hero-image-wrapper {
+            height: -webkit-fill-available;
+        }
+    }
+}
+
+/* Android Chrome specific fixes */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .kontak-content,
+    .social-content,
+    .store-content {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+}
+
+/* Landscape orientation fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    .kontak-hero {
+        min-height: 90vh;
+    }
+    
+    .hero-image-wrapper {
+        height: 90vh;
+    }
+    
+    .hero-text-overlay {
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        padding: 15px 20px;
+    }
+    
+    .hero-main-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .kontak-icon svg,
+    .social-media-icon,
+    .footer-kontak .social-link img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 }
 
@@ -316,26 +788,97 @@
         font-size: 0.75rem;
     }
     
-    .social-icons-section {
-        padding: 12px 0;
+    /* Contact Info Section */
+    .kontak-info {
+        padding: 30px 0;
     }
     
-    .social-icons-grid {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .kontak-title {
+        font-size: 1.7rem;
     }
     
-    .social-icon {
-        width: 40px;
-        height: 40px;
+    .kontak-subtitle {
+        font-size: 0.9rem;
     }
     
-    .social-icon img {
-        width: 22px;
-        height: 22px;
+    .kontak-card {
+        padding: 20px 15px;
     }
     
+    .kontak-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .kontak-card-title {
+        font-size: 1.1rem;
+    }
+    
+    .kontak-card-text {
+        font-size: 0.8rem;
+    }
+    
+    /* Social Media Section */
+    .social-media-section {
+        padding: 30px 0;
+    }
+    
+    .social-title {
+        font-size: 1.7rem;
+    }
+    
+    .social-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .social-media-card {
+        height: 140px;
+    }
+    
+    .social-media-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-media-title {
+        font-size: 1rem;
+    }
+    
+    .social-media-text {
+        font-size: 0.75rem;
+    }
+    
+    /* Online Store Section */
+    .online-store-section {
+        padding: 30px 0;
+    }
+    
+    .store-title {
+        font-size: 1.7rem;
+    }
+    
+    .store-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .store-card {
+        height: 140px;
+    }
+    
+    .store-name {
+        font-size: 1.2rem;
+    }
+    
+    .store-text {
+        font-size: 0.8rem;
+    }
+    
+    /* Footer */
     .footer-kontak {
         padding: 15px 0;
     }
@@ -374,6 +917,7 @@
     
     .footer-kontak .footer-nav {
         gap: 10px;
+        flex-wrap: wrap;
     }
     
     .footer-kontak .footer-nav-link {
@@ -420,5 +964,100 @@
     .hero-note {
         font-size: 0.7rem;
         line-height: 1.3;
+    }
+    
+    /* Contact Info Section */
+    .kontak-info {
+        padding: 25px 0;
+    }
+    
+    .kontak-title {
+        font-size: 1.5rem;
+    }
+    
+    .kontak-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .kontak-card {
+        padding: 15px 12px;
+    }
+    
+    .kontak-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .kontak-card-title {
+        font-size: 1rem;
+    }
+    
+    .kontak-card-text {
+        font-size: 0.75rem;
+    }
+    
+    /* Social Media Section */
+    .social-media-section {
+        padding: 25px 0;
+    }
+    
+    .social-title {
+        font-size: 1.5rem;
+    }
+    
+    .social-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .social-media-card {
+        height: 120px;
+    }
+    
+    .social-media-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-media-title {
+        font-size: 0.9rem;
+    }
+    
+    .social-media-text {
+        font-size: 0.7rem;
+    }
+    
+    /* Online Store Section */
+    .online-store-section {
+        padding: 25px 0;
+    }
+    
+    .store-title {
+        font-size: 1.5rem;
+    }
+    
+    .store-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .store-card {
+        height: 120px;
+    }
+    
+    .store-name {
+        font-size: 1.1rem;
+    }
+    
+    .store-text {
+        font-size: 0.75rem;
+    }
+    
+    /* Footer */
+    .footer-kontak .footer-nav {
+        gap: 8px;
+    }
+    
+    .footer-kontak .footer-nav-link {
+        font-size: 0.7rem;
+        padding: 3px 6px;
     }
 }

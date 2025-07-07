@@ -158,49 +158,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Mobile menu toggle
-    const createMobileMenuToggle = () => {
-        const header = document.querySelector('.header .container');
-        const nav = document.querySelector('.nav');
+    // Mobile menu toggle functionality
+    function initializeMobileMenu() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navList = document.querySelector('.nav-list');
         
-        if (window.innerWidth <= 768) {
-            let menuToggle = document.querySelector('.menu-toggle');
+        if (!mobileMenuToggle || !navList) {
+            console.log('Mobile menu elements not found');
+            return;
+        }
+        
+        console.log('Initializing mobile menu...');
+        
+        // Toggle menu function
+        function toggleMenu() {
+            const isActive = navList.classList.contains('active');
             
-            if (!menuToggle) {
-                menuToggle = document.createElement('button');
-                menuToggle.className = 'menu-toggle';
-                menuToggle.innerHTML = '☰';
-                menuToggle.style.cssText = `
-                    background: none;
-                    border: none;
-                    color: white;
-                    font-size: 24px;
-                    cursor: pointer;
-                    display: block;
-                `;
-                
-                header.appendChild(menuToggle);
-                
-                menuToggle.addEventListener('click', () => {
-                    nav.classList.toggle('nav-open');
-                });
+            if (isActive) {
+                navList.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                mobileMenuToggle.innerHTML = '☰';
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                navList.classList.add('active');
+                document.body.classList.add('menu-open');
+                mobileMenuToggle.innerHTML = '✕';
+                mobileMenuToggle.setAttribute('aria-expanded', 'true');
             }
         }
-    };
-    
-    // Mobile menu toggle functionality
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navList = document.querySelector('.nav-list');
-    
-    if (mobileMenuToggle && navList) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navList.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-            
-            // Update button text
-            const isOpen = navList.classList.contains('active');
-            this.innerHTML = isOpen ? '✕' : '☰';
-            this.setAttribute('aria-expanded', isOpen);
+        
+        // Add click event to toggle button
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
         });
         
         // Close mobile menu when clicking on a link
@@ -223,11 +214,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
             }
         });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navList.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                mobileMenuToggle.innerHTML = '☰';
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
     
-    // Handle window resize
-    window.addEventListener('resize', createMobileMenuToggle);
-    createMobileMenuToggle();
+    // Initialize mobile menu
+    initializeMobileMenu();
     
     // Add hover effects for all cards
     const allCards = document.querySelectorAll('.product-preview-card, .product-item, .kontak-card, .detail-item');
@@ -258,41 +258,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add CSS for mobile menu
+// Add CSS for mobile menu body scroll lock
 const style = document.createElement('style');
 style.textContent = `
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+    }
+    
     @media (max-width: 768px) {
-        .nav {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #8FBC8F, #6B8E23);
-            transform: translateY(-100%);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .nav.nav-open {
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
+        .mobile-menu-toggle {
+            display: flex !important;
         }
         
         .nav-list {
-            flex-direction: column;
-            padding: 20px;
+            position: fixed !important;
+            top: 0 !important;
+            left: -100% !important;
+            transform: none !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
         
-        .menu-toggle {
-            display: block !important;
+        .nav-list.active {
+            left: 0 !important;
         }
     }
     
     @media (min-width: 769px) {
-        .menu-toggle {
+        .mobile-menu-toggle {
             display: none !important;
+        }
+        
+        .nav-list {
+            position: static !important;
+            left: auto !important;
+            transform: none !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
     }
 `;
