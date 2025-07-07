@@ -1,0 +1,383 @@
+/* Contact Page Styles - Kontak.html */
+
+/* Contact Hero Section */
+.kontak-hero {
+    margin-top: 80px;
+    position: relative;
+    min-height: 80vh;
+    background: var(--secondary-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    max-width: 500px;
+    z-index: 10;
+}
+
+.hero-main-title {
+    font-family: var(--font-garamond);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #DAA520;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-family: var(--font-garamond);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #DAA520;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-description {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.hero-note {
+    font-family: var(--font-montserrat);
+    font-size: 0.85rem;
+    color: var(--white);
+    font-style: italic;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Contact Footer */
+.footer-kontak {
+    background: linear-gradient(135deg, #2F4F2F, #1C3A1C);
+    color: var(--white);
+    padding: 15px 0;
+    border-top: none;
+    margin-top: 0;
+    position: relative;
+}
+
+.footer-kontak .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-kontak .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-kontak .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-kontak .footer-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-kontak .footer-brand {
+    font-family: var(--font-garamond);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #DAA520;
+    margin: 0;
+}
+
+.footer-kontak .footer-info {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.footer-kontak .footer-address {
+    font-family: var(--font-poppins);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #DAA520;
+    margin-bottom: 5px;
+}
+
+.footer-kontak .footer-copyright {
+    font-family: var(--font-poppins);
+    font-size: 0.75rem;
+    color: #DAA520;
+    margin: 0;
+}
+
+.footer-kontak .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-kontak .social-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-kontak .social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(218, 165, 32, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+    border: 2px solid rgba(218, 165, 32, 0.3);
+}
+
+.footer-kontak .social-link:hover {
+    background: rgba(218, 165, 32, 0.4);
+    transform: translateY(-2px);
+    border-color: #DAA520;
+}
+
+.footer-kontak .social-link img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(80%) saturate(415%) hue-rotate(2deg) brightness(94%) contrast(86%);
+}
+
+.footer-kontak .footer-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-kontak .footer-nav-link {
+    color: #DAA520;
+    text-decoration: none;
+    font-family: var(--font-montserrat);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.footer-kontak .footer-nav-link:hover {
+    background: rgba(218, 165, 32, 0.2);
+    color: var(--white);
+}
+
+/* Responsive Design for Contact Page */
+@media (max-width: 768px) {
+    .kontak-hero {
+        margin-top: 60px;
+        min-height: 70vh;
+    }
+    
+    .hero-image-wrapper {
+        height: 70vh;
+    }
+    
+    .hero-text-overlay {
+        bottom: 30px;
+        right: 30px;
+        left: 30px;
+        padding: 25px 30px;
+        max-width: none;
+        text-align: center;
+    }
+    
+    .hero-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .hero-description {
+        font-size: 0.85rem;
+    }
+    
+    .hero-note {
+        font-size: 0.8rem;
+    }
+    
+    .social-icons-section {
+        padding: 15px 0;
+    }
+    
+    .social-icons-grid {
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer-kontak {
+        padding: 20px 0;
+    }
+    
+    .footer-kontak .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-kontak .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-kontak .footer-nav {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kontak-hero {
+        margin-top: 50px;
+        min-height: 60vh;
+    }
+    
+    .hero-image-wrapper {
+        height: 60vh;
+    }
+    
+    .hero-text-overlay {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        padding: 20px 25px;
+        text-align: center;
+    }
+    
+    .hero-main-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 0.8rem;
+    }
+    
+    .hero-note {
+        font-size: 0.75rem;
+    }
+    
+    .social-icons-section {
+        padding: 12px 0;
+    }
+    
+    .social-icons-grid {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-icon img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .footer-kontak {
+        padding: 15px 0;
+    }
+    
+    .footer-kontak .footer-content {
+        gap: 10px;
+    }
+    
+    .footer-kontak .footer-logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .footer-kontak .footer-brand {
+        font-size: 1.1rem;
+    }
+    
+    .footer-kontak .footer-address {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .footer-kontak .footer-copyright {
+        font-size: 0.65rem;
+    }
+    
+    .footer-kontak .social-link {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .footer-kontak .social-link img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer-kontak .footer-nav {
+        gap: 10px;
+    }
+    
+    .footer-kontak .footer-nav-link {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+}

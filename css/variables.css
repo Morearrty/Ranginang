@@ -1,0 +1,186 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    --primary-green: #8FBC8F;
+    --primary-dark-green: #6B8E23;
+    --secondary-yellow: #F0E68C;
+    --secondary-dark-yellow: #DAA520;
+    --dark-green: #2F4F2F;
+    --darker-green: #1C3A1C;
+    --white: #FFFFFF;
+    --text-dark: #333333;
+    --text-light: rgba(255, 255, 255, 0.9);
+    --light-beige: #FAF3E0;
+    --cream: #FFF8E1;
+    --dark-brown: #4A3C2F;
+    --text-gray: #666666;
+    
+    /* Fonts */
+    --font-primary: 'Poppins', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-heading: 'Garamond', serif;
+    --font-garamond: 'EB Garamond', serif;
+    --font-accent: 'Montserrat', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    
+    /* Spacing */
+    --header-height: 70px;
+    --section-padding: 60px;
+    --container-padding: 20px;
+    
+    /* Border Radius */
+    --border-radius-sm: 10px;
+    --border-radius-md: 20px;
+    --border-radius-lg: 30px;
+    --border-radius-full: 50%;
+    
+    /* Shadows */
+    --shadow-light: 0 5px 15px rgba(0,0,0,0.08);
+    --shadow-medium: 0 10px 25px rgba(0,0,0,0.1);
+    --shadow-heavy: 0 20px 40px rgba(0,0,0,0.15);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Better text selection */
+::selection {
+    background: var(--secondary-yellow);
+    color: var(--dark-green);
+}
+
+::-moz-selection {
+    background: var(--secondary-yellow);
+    color: var(--dark-green);
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.social-link:focus,
+.footer-nav-link:focus,
+.whatsapp-btn:focus {
+    outline: 2px solid var(--secondary-yellow);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .social-links,
+    .whatsapp-btn {
+        display: none !important;
+    }
+    
+    .beranda-hero,
+    .profil-hero,
+    .kontak-hero,
+    .produk-hero {
+        margin-top: 0 !important;
+    }
+    
+    body {
+        color: black !important;
+        background: white !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow-light: 0 5px 15px rgba(0,0,0,0.3);
+        --shadow-medium: 0 10px 25px rgba(0,0,0,0.4);
+        --shadow-heavy: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    
+    .header {
+        border-bottom: 2px solid var(--white);
+    }
+    
+    .footer {
+        border-top: 2px solid var(--white);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
