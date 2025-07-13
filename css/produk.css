@@ -348,6 +348,31 @@
 }
 
 /* Responsive Design for Product Page */
+@media (max-width: 1024px) {
+    .hero-produk-title {
+        font-size: 3rem;
+    }
+    
+    .hero-produk-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .products-horizontal {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .produk-title {
+        font-size: 2.8rem;
+    }
+    
+    .products-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-produk-title {
         font-size: 2.5rem;
@@ -418,34 +443,50 @@
     
     .products-horizontal {
         gap: 20px;
-        padding: 0 10px;
-    }
-    
-    .product-card-new {
-        border-radius: 15px;
-    }
-    
-    .product-image-new {
-        height: 200px;
     }
     
     .product-info-new {
-        padding: 20px 15px;
+        padding: 15px;
     }
     
     .product-title-new {
         font-size: 1.3rem;
-        margin-bottom: 12px;
     }
     
-    .product-description-new {
+    .produk-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-produk-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-produk-subtitle {
         font-size: 0.9rem;
     }
     
-    .product-price {
-        top: 15px;
-        right: 15px;
-        padding: 6px 12px;
-        font-size: 0.8rem;
+    .hero-produk-overlay {
+        padding: 15px;
+        margin: 0 10px;
+    }
+    
+    .produk-title {
+        font-size: 1.8rem;
+    }
+    
+    .product-title-new {
+        font-size: 1.2rem;
+    }
+    
+    .product-info-new {
+        padding: 12px;
+    }
+    
+    .products-horizontal {
+        gap: 15px;
+        padding: 0 10px;
     }
 }
