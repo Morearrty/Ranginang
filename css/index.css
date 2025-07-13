@@ -4,7 +4,7 @@
 .beranda-hero {
     margin-top: var(--header-height);
     padding: 0;
-    background: linear-gradient(135deg, var(--secondary-yellow), var(--secondary-dark-yellow));
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green));
     position: relative;
     min-height: 70vh;
 }
@@ -77,7 +77,7 @@
 
 /* Beranda Content */
 .beranda-content {
-    background: linear-gradient(135deg, var(--secondary-yellow), var(--secondary-dark-yellow));
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFEFD5 100%);
     padding: var(--section-padding) 0 0;
     position: relative;
     margin-bottom: 0;
@@ -90,9 +90,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(143, 188, 143, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(107, 142, 35, 0.1) 0%, transparent 50%);
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(240, 230, 140, 0.05) 0px,
+        rgba(240, 230, 140, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+    );
     pointer-events: none;
 }
 
@@ -224,7 +228,7 @@
 /* Beranda Quotes */
 .beranda-quotes {
     text-align: center;
-    color: var(--dark-green);
+    color: #1C3A1C;
     max-width: 900px;
     margin: 0 auto;
 }

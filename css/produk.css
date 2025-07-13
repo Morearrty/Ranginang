@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--light-beige) 0%, var(--cream) 100%);
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green));
     padding: 60px 0;
 }
 
@@ -53,7 +53,7 @@
     font-family: var(--font-garamond);
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--white);
+    color: #DAA520;
     margin-bottom: 16px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
@@ -63,7 +63,7 @@
     font-family: var(--font-montserrat);
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--light-beige);
+    color: #DAA520;
     margin: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -71,8 +71,26 @@
 /* Product Grid Section */
 .produk-grid-new {
     padding: 80px 0 60px;
-    background: linear-gradient(180deg, var(--white) 0%, var(--light-beige) 100%);
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFEFD5 100%);
     margin-bottom: 0;
+    position: relative;
+}
+
+.produk-grid-new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(240, 230, 140, 0.05) 0px,
+        rgba(240, 230, 140, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    pointer-events: none;
 }
 
 .products-horizontal {
@@ -141,7 +159,7 @@
     font-family: var(--font-garamond);
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--dark-brown);
+    color: #1C3A1C;
     margin-bottom: 16px;
     letter-spacing: 1px;
 }
@@ -149,7 +167,7 @@
 .product-description-new {
     font-family: var(--font-poppins);
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: #2F4F2F;
     line-height: 1.6;
     margin: 0;
 }
@@ -180,7 +198,25 @@
 
 .produk-grid {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--light-beige), var(--cream));
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFEFD5 100%);
+    position: relative;
+}
+
+.produk-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(240, 230, 140, 0.05) 0px,
+        rgba(240, 230, 140, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    pointer-events: none;
 }
 
 .products-wrapper {

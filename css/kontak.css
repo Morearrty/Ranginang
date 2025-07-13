@@ -5,7 +5,7 @@
     margin-top: 80px;
     position: relative;
     min-height: 80vh;
-    background: var(--secondary-yellow);
+    background: var(--primary-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,8 +86,26 @@
 
 /* Contact Information Section */
 .kontak-info {
-    background: var(--cream);
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFEFD5 100%);
     padding: 60px 0;
+    position: relative;
+}
+
+.kontak-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(240, 230, 140, 0.05) 0px,
+        rgba(240, 230, 140, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    pointer-events: none;
 }
 
 .kontak-content {
@@ -105,14 +123,14 @@
     font-family: var(--font-garamond);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark-green);
+    color: #1C3A1C;
     margin-bottom: 15px;
 }
 
 .kontak-subtitle {
     font-family: var(--font-poppins);
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: #2F4F2F;
     margin: 0;
 }
 
@@ -155,14 +173,14 @@
     font-family: var(--font-garamond);
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--dark-green);
+    color: #1C3A1C;
     margin-bottom: 15px;
 }
 
 .kontak-card-text {
     font-family: var(--font-poppins);
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: #2F4F2F;
     line-height: 1.6;
     margin: 0;
 }
@@ -183,7 +201,7 @@
     font-family: var(--font-garamond);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark-green);
+    color: #1C3A1C;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -191,7 +209,7 @@
 .social-subtitle {
     font-family: var(--font-poppins);
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: #2F4F2F;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -267,8 +285,26 @@
 
 /* Online Store Section */
 .online-store-section {
-    background: var(--cream);
+    background: linear-gradient(135deg, #F5F5DC 0%, #FFEFD5 100%);
     padding: 60px 0;
+    position: relative;
+}
+
+.online-store-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(240, 230, 140, 0.05) 0px,
+        rgba(240, 230, 140, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+    pointer-events: none;
 }
 
 .store-content {
@@ -281,7 +317,7 @@
     font-family: var(--font-garamond);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark-green);
+    color: #1C3A1C;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -289,7 +325,7 @@
 .store-subtitle {
     font-family: var(--font-poppins);
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: #2F4F2F;
     text-align: center;
     margin-bottom: 40px;
 }
