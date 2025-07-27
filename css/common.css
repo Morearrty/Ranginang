@@ -2,7 +2,7 @@
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, var(--dark-green), var(--darker-green));
+    background: var(--dark-green);
     padding: 15px 0;
     position: fixed;
     top: 0;
@@ -132,7 +132,7 @@
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--dark-green), var(--darker-green));
+    background: var(--dark-green);
     color: var(--white);
     padding: 30px 0 15px;
     border-top: 3px solid var(--secondary-yellow);
@@ -147,9 +147,7 @@
     left: 0;
     right: 0;
     height: 100%;
-    background-image: 
-        radial-gradient(circle at 30% 30%, rgba(240, 230, 140, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(143, 188, 143, 0.03) 0%, transparent 50%);
+    background: rgba(240, 230, 140, 0.03);
     pointer-events: none;
 }
 
@@ -261,7 +259,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.3), transparent);
+    background: rgba(218, 165, 32, 0.1);
     transition: left 0.5s ease;
 }
 
@@ -488,7 +486,7 @@
         left: -100%;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(135deg, var(--dark-green), var(--darker-green));
+        background: var(--dark-green);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -498,216 +496,40 @@
         overflow-y: auto;
         display: flex;
         list-style: none;
-        margin: 0;
+        gap: 20px;
     }
     
     .nav-list.active {
         left: 0;
-        display: flex;
     }
     
-    .nav-link {
-        width: 90%;
-        max-width: 300px;
+    .nav-list .nav-link {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+        width: 100%;
         text-align: center;
-        padding: 15px 20px;
-        margin: 8px 0;
         border-radius: 10px;
-        font-size: 16px;
-        color: #DAA520;
-        background: rgba(218, 165, 32, 0.1);
-        border: 1px solid rgba(218, 165, 32, 0.2);
-        display: block;
-        min-height: 44px;
-        line-height: 1.2;
-        text-decoration: none;
+        margin: 5px 0;
     }
     
-    .nav-link:hover,
-    .nav-link.active {
-        background: rgba(218, 165, 32, 0.3);
-        color: var(--white);
+    .nav-list .nav-link:hover,
+    .nav-list .nav-link.active {
+        background: rgba(255, 255, 255, 0.2);
         transform: none;
     }
-    
-    .nav-link::after {
-        display: none;
-    }
-    
-    /* Mobile menu toggle button - ALWAYS visible on mobile */
-    .mobile-menu-toggle {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        background: rgba(218, 165, 32, 0.1);
-        border: 2px solid rgba(218, 165, 32, 0.3);
-        border-radius: 8px;
-        cursor: pointer;
-        padding: 10px;
-        color: #DAA520;
-        font-size: 20px;
-        font-weight: bold;
-        min-height: 44px;
-        min-width: 44px;
-        z-index: 1001;
-        position: relative;
-        transition: all 0.3s ease;
-    }
-    
-    .mobile-menu-toggle:focus {
-        outline: 2px solid #DAA520;
-        outline-offset: 2px;
-        background: rgba(218, 165, 32, 0.2);
-    }
-    
-    .mobile-menu-toggle:hover {
-        background: rgba(218, 165, 32, 0.2);
-        border-color: #DAA520;
-        transform: scale(1.05);
-    }
-    
-    .mobile-menu-toggle:active {
-        transform: scale(0.95);
-        background: rgba(218, 165, 32, 0.3);
-    }
-    
-    /* Prevent body scroll when menu is open */
-    body.menu-open {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
 }
 
-@media (min-width: 769px) {
-    .mobile-menu-toggle {
-        display: none !important;
-    }
-    
-    .nav-list {
-        position: static !important;
-        display: flex !important;
-        flex-direction: row !important;
-        background: none !important;
-        height: auto !important;
-        width: auto !important;
-        padding: 0 !important;
-        transition: none !important;
-        left: auto !important;
-    }
-    
-    .nav-link {
-        width: auto !important;
-        max-width: none !important;
-        padding: 10px 18px !important;
-        margin: 0 !important;
-        background: none !important;
-        border: none !important;
-        color: var(--white) !important;
-        font-size: 14px !important;
-        min-height: auto !important;
-        text-align: left !important;
-    }
-    
-    .nav-link:hover,
-    .nav-link.active {
-        background: rgba(255, 255, 255, 0.2) !important;
-        color: var(--white) !important;
-        transform: translateY(-2px) !important;
-    }
-    
-    .nav-link::after {
-        display: block !important;
-    }
-}
-
-/* Performance optimizations for mobile */
+/* Additional mobile navigation styles */
 @media (max-width: 768px) {
-    /* Reduce animations on mobile to improve performance */
-    *, *::before, *::after {
-        animation-duration: 0.3s !important;
-        transition-duration: 0.3s !important;
+    .mobile-menu-toggle.active {
+        color: var(--white);
     }
     
-    /* Optimize images for mobile */
-    img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: optimize-contrast;
+    .mobile-menu-toggle.active::before {
+        content: '✕';
     }
     
-    /* Better text rendering on mobile */
-    body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-    }
-    
-    /* Prevent body scroll when mobile menu is open */
-    body.menu-open {
-        overflow: hidden;
-    }
-}
-
-/* iOS Safari specific fixes */
-@supports (-webkit-appearance: none) {
-    @media (max-width: 768px) {
-        .header {
-            position: -webkit-sticky;
-            position: sticky;
-        }
-        
-        /* Fix iOS viewport height issues */
-        .profil-hero,
-        .kontak-hero {
-            min-height: -webkit-fill-available;
-        }
-    }
-}
-
-/* Android specific fixes */
-@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
-    .container {
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-    }
-}
-
-/* Prevent horizontal scroll */
-* {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-    transition: all 0.3s ease;
-}
-
-/* Prevent body scroll when mobile menu is open */
-body.menu-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-}
-
-/* Touch-friendly improvements */
-@media (max-width: 768px) {
-    .nav-link,
-    .social-link,
-    .footer-nav-link {
-        min-height: 44px;
-        min-width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        -webkit-tap-highlight-color: rgba(218, 165, 32, 0.2);
-        -webkit-tap-highlight-color: rgba(218, 165, 32, 0.2);
-    }
-    
-    .footer-nav-link {
-        min-height: 40px;
-        min-width: auto;
-        padding: 8px 12px;
+    .mobile-menu-toggle:not(.active)::before {
+        content: '☰';
     }
 }
